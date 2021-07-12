@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import './App.css';
 import logo from './logo.svg';
-import Button from 'react-bootstrap/Button';
 import {BrowserRouter as Router, Route, Switch, Link, Redirect} from 'react-router-dom';
 import MainPage from './Pages/index';
 import NotFoundPage from './Pages/404';
