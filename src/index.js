@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import MyWeatherApp from './MyWeatherApp';
 import reportWebVitals from './reportWebVitals';
 
