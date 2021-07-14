@@ -1,0 +1,74 @@
+/* .App {
+  text-align: center;
+  border: 5px solid red;
+} */
+
+/* .App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+} */
+
+/* .App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  margin-top: 20px;
+} */
+
+/* .App-link {
+  color: red;
+} */
+
+/* @keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
+/* --------------------------- BODY /* ---------------------------*/
+
+/* --------------------------- HEADER /* ---------------------------*/
+
+/* --------------------------- NAVIGATION /* ---------------------------*/
+nav.navbar {
+  background: linear-gradient(174deg, rgba(255,252,36,1) 0%, rgba(90,191,248,1) 59%, rgba(118,228,254,1) 84%, rgba(116,229,255,1) 84%);
+
+  a.navbar-brand {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    img{
+      width: 50px;
+    }
+  }
+}
+
+/* --------------------------- MAIN /* ---------------------------*/
+form {
+  div.form-group {
+    width: 350px;
+    margin: 3rem;
+  }
+}
+
+/* --------------------------- FOOTER /* ---------------------------*/
+
+/* --------------------------- Clearfix /* ---------------------------*/
+.clearfix:after{
+  content:"";
+  display: table;
+  clear: both;
+}

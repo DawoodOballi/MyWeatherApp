@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import MyWeatherApp from './MyWeatherApp';
 import reportWebVitals from './reportWebVitals';
+import './scss/reset.scss'
 
 function render() {
   ReactDOM.render(
