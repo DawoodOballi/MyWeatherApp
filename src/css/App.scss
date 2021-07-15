@@ -60,10 +60,32 @@ nav.navbar {
 form {
   div.form-group {
     width: 350px;
-    margin: 3rem;
+    margin: 3rem 3rem 3rem 9rem;
   }
 }
 
+div.card {
+  display: inline-block;
+  margin-left: 10rem;
+
+  .card-body {
+    width: 450px;
+    background-image: url("https://i.pinimg.com/originals/77/0b/80/770b805d5c99c7931366c2e84e88f251.png");
+    background-position: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  h5, p{
+    padding-left: 8rem;
+  }
+}
+
+.weatherList {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 0 -20px;
+}
 /* --------------------------- FOOTER /* ---------------------------*/
 
 /* --------------------------- Clearfix /* ---------------------------*/

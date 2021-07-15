@@ -2,8 +2,9 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome, faInfoCircle } from "@fortawesome/free-solid-svg-icons";
-import "./../../../css/App.scss";
-import logo from "./../../../img/logo.png"
+import "./../../css/App.scss";
+import logo from "./../../img/logo.png"
+import Typed from 'react-typed'
 
 const Navigation = () => {
   const activeStyle = { color: "#F15B2A" };
@@ -11,21 +12,16 @@ const Navigation = () => {
   return (
     <nav class="navbar navbar-expand navbar-light bg-custom-1">
       <a class="navbar-brand" href="logo">
-        <img className="logo" src={logo} alt="logo..."/>
+        <img className="logo" src={logo} alt="logo..." />
       </a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <Typed
+          className="typed-text"
+          strings={["Hello to MyWeather", "Check the weather forecast"]}
+          typeSpeed={40}
+          backSpeed={30}
+          loop
+        />
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
             <NavLink

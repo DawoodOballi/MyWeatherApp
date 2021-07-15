@@ -1,13 +1,22 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import MyWeatherApp from './MyWeatherApp';
-import reportWebVitals from './reportWebVitals';
-import './scss/reset.scss'
+import React from "react";
+import ReactDOM from "react-dom";
+import {BrowserRouter as Router} from "react-router-dom";
+import MyWeatherApp from "./MyWeatherApp";
+import reportWebVitals from "./reportWebVitals";
+import "./scss/reset.scss";
+import configureStore from "./redux/configureStore";
+import { Provider as ReduxProvider } from "react-redux";
+
+const store = configureStore();
 
 function render() {
   ReactDOM.render(
-      <MyWeatherApp />,
-    document.getElementById('root')
+    <ReduxProvider store={store}>
+      <Router>
+        <MyWeatherApp />
+      </Router>
+    </ReduxProvider>,
+    document.getElementById("root")
   );
 }
 render();
