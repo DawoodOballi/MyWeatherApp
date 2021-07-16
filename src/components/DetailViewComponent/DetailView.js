@@ -35,14 +35,13 @@ class DetailView extends Component {
                   alt=""
                 />
                 <div class="file btn btn-lg btn-primary">
-                  {city}
+                  {city.toUpperCase()}
                   <input type="file" name="file" />
                 </div>
               </div>
             </div>
             <div class="col-md-8">
               <div class="profile-head">
-                <h5>Detail View</h5>
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                   <li class="nav-item">
                     <a
@@ -84,7 +83,7 @@ class DetailView extends Component {
                       >
                         <div class="row">
                           <div class="col-md-6">
-                            <label>Max Temeperature</label>
+                            <label>Temeperature</label>
                           </div>
                           <div class="col-md-6">
                             <p>
@@ -97,7 +96,9 @@ class DetailView extends Component {
                             <label>High</label>
                           </div>
                           <div class="col-md-6">
-                            <p>Kshadwasdawdwfaiti Ghelasdawdasdawdaani</p>
+                            <p>
+                              {parseInt(weatherData.main.temp_max) - 273}&#176;C
+                            </p>
                           </div>
                         </div>
                         <div class="row">
@@ -105,7 +106,9 @@ class DetailView extends Component {
                             <label>Low</label>
                           </div>
                           <div class="col-md-6">
-                            <p>dasdawdasdawdasd</p>
+                            <p>
+                              {parseInt(weatherData.main.temp_min) - 273}&#176;C
+                            </p>
                           </div>
                         </div>
                         <div class="row">
@@ -113,61 +116,23 @@ class DetailView extends Component {
                             <label>humidity</label>
                           </div>
                           <div class="col-md-6">
-                            <p>123 456 7890</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        class="tab-pane fade"
-                        id="profile"
-                        role="tabpanel"
-                        aria-labelledby="profile-tab"
-                      >
-                        <div class="row">
-                          <div class="col-md-6">
-                            <label>Experience</label>
-                          </div>
-                          <div class="col-md-6">
-                            <p>Expert</p>
+                            <p>{parseInt(weatherData.main.humidity)}%</p>
                           </div>
                         </div>
                         <div class="row">
                           <div class="col-md-6">
-                            <label>Hourly Rate</label>
+                            <label>Weather</label>
                           </div>
                           <div class="col-md-6">
-                            <p>10$/hr</p>
+                            <p>{weatherData.weather[0].main.toUpperCase()}</p>
                           </div>
                         </div>
                         <div class="row">
                           <div class="col-md-6">
-                            <label>Total Projects</label>
+                            <label>Description</label>
                           </div>
                           <div class="col-md-6">
-                            <p>230</p>
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div class="col-md-6">
-                            <label>English Level</label>
-                          </div>
-                          <div class="col-md-6">
-                            <p>Expert</p>
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div class="col-md-6">
-                            <label>Availability</label>
-                          </div>
-                          <div class="col-md-6">
-                            <p>6 months</p>
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div class="col-md-12">
-                            <label>Your Bio</label>
-                            <br />
-                            <p>Your detail description</p>
+                            <p>{weatherData.weather[0].description.toUpperCase()}</p>
                           </div>
                         </div>
                       </div>
