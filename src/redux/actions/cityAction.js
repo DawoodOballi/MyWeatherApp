@@ -10,7 +10,7 @@ import {
 
 
 export function addCity(city) {
-    return {type: ADD_CITY, city}
+    return {type: ADD_CITY, city: city}
 }
 
 export function loadCityFailure(city, error) {

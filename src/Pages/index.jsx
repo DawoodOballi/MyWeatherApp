@@ -6,6 +6,7 @@ import WeatherCard from "../components/WeatherCardComponent/WeatherCard";
 import "./../css/App.scss";
 import { connect } from "react-redux";
 
+
 const MainPage = ({ cities }) => {
   // if (!cities) {
   //   return (
@@ -22,7 +23,7 @@ const MainPage = ({ cities }) => {
       <div>
         {cities.map(({ city }) => (
           <React.Fragment key={city}>
-            <Link to={`/detailView/${city}`}>
+            <Link to={`/DetailView/${city}`}>
             <div class="card-columns">
               <WeatherCard cityName={city} />
             </div>

@@ -4,16 +4,19 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import loadCity from "../../redux/actions/cityAction";
 
+
 class WeatherCard extends Component {
   componentDidMount() {
+    console.log(this.props);
     const { city, failure, loading, weatherData, loadCityData } = this.props;
     if (!failure && !loading && !weatherData) {
       loadCityData(city);
     }
   }
 
+
   render() {
-    const { failure, weatherData, cityName } = this.props;
+    const {  weatherData, cityName, failure } = this.props;
 
     if (weatherData && weatherData.main) {
       return (
@@ -23,7 +26,7 @@ class WeatherCard extends Component {
               <div class="card-body" data-filter="overlay-secondary">
                 <h5 class="card-title text-center">{cityName.toUpperCase()}</h5>
                 <p class="card-text text-center">
-                  {parseInt(weatherData.main.temp) - 273}&#176;C
+                  {parseInt(weatherData.main.temp) - 273}&#176;C | {weatherData.weather[0].main}
                 </p>
                 {/* <a href="https://www.google.com" class="stretched-link"></a> */}
               </div>
@@ -39,7 +42,6 @@ class WeatherCard extends Component {
             <div class="card-body" data-filter="overlay-secondary">
               <h5 class="card-title text-center">{cityName}</h5>
               <p class="card-text text-center">Please enter a valid city</p>
-              {/* <a href="https://www.google.com" class="stretched-link"></a> */}
             </div>
           </div>
         </div>
